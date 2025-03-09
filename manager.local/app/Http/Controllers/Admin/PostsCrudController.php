@@ -73,6 +73,16 @@ class PostsCrudController extends CrudController
                 
             ])->to('before_content');
         }
+        CRUD::field('preview_text')->remove();
+        CRUD::addField([
+            'name' => 'preview_text',
+            'type' => 'rich_text'
+        ]);
+        // Widget::add([
+        //     'type' => 'view',
+        //     'view' => 'admin.posts.fields.rich_text',
+        //     'tmp' => ''
+        // ])->to('after_content');
         /**
          * Fields can be defined using the fluent syntax:
          * - CRUD::field('price')->type('number');

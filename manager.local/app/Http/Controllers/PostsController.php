@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Dosc;
-use App\Http\Requests\StoreDoscRequest;
-use App\Http\Requests\UpdateDoscRequest;
+use App\Models\Posts;
+use App\Http\Requests\StorePostsRequest;
+use App\Http\Requests\UpdatePostsRequest;
 
-class DoscController extends Controller
+class PostsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -27,7 +27,7 @@ class DoscController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreDoscRequest $request)
+    public function store(StorePostsRequest $request)
     {
         //
     }
@@ -35,7 +35,7 @@ class DoscController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Dosc $dosc)
+    public function show(Posts $posts)
     {
         //
     }
@@ -43,7 +43,7 @@ class DoscController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Dosc $dosc)
+    public function edit(Posts $posts)
     {
         //
     }
@@ -51,7 +51,7 @@ class DoscController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateDoscRequest $request, Dosc $dosc)
+    public function update(UpdatePostsRequest $request, Posts $posts)
     {
         //
     }
@@ -59,7 +59,7 @@ class DoscController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Dosc $dosc)
+    public function destroy(Posts $posts)
     {
         //
     }

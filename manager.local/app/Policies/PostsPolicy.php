@@ -2,11 +2,11 @@
 
 namespace App\Policies;
 
-use App\Models\Dosc;
+use App\Models\Posts;
 use App\Models\User;
 use Illuminate\Auth\Access\Response;
 
-class DoscPolicy
+class PostsPolicy
 {
     /**
      * Determine whether the user can view any models.
@@ -19,7 +19,7 @@ class DoscPolicy
     /**
      * Determine whether the user can view the model.
      */
-    public function view(User $user, Dosc $dosc): bool
+    public function view(User $user, Posts $posts): bool
     {
         return false;
     }
@@ -35,7 +35,7 @@ class DoscPolicy
     /**
      * Determine whether the user can update the model.
      */
-    public function update(User $user, Dosc $dosc): bool
+    public function update(User $user, Posts $posts): bool
     {
         return false;
     }
@@ -43,7 +43,7 @@ class DoscPolicy
     /**
      * Determine whether the user can delete the model.
      */
-    public function delete(User $user, Dosc $dosc): bool
+    public function delete(User $user, Posts $posts): bool
     {
         return false;
     }
@@ -51,7 +51,7 @@ class DoscPolicy
     /**
      * Determine whether the user can restore the model.
      */
-    public function restore(User $user, Dosc $dosc): bool
+    public function restore(User $user, Posts $posts): bool
     {
         return false;
     }
@@ -59,7 +59,7 @@ class DoscPolicy
     /**
      * Determine whether the user can permanently delete the model.
      */
-    public function forceDelete(User $user, Dosc $dosc): bool
+    public function forceDelete(User $user, Posts $posts): bool
     {
         return false;
     }

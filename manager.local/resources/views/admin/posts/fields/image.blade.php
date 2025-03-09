@@ -1,0 +1,1 @@
+<img style="max-height:500px;" src="{{ $widget['url'] }}" alt="no">

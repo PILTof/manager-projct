@@ -1,5 +1,6 @@
 \.osp
-**/vendor
+# **/vendor
 \.**
 !\.gitignore
 composer\.lock
+\.vscode

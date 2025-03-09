@@ -14,6 +14,8 @@ return new class extends Migration
         Schema::create('doscs', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->longText('detail_text');
+            $table->longText('preview_text');
         });
     }
 

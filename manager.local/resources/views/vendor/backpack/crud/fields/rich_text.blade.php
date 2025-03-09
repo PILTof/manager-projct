@@ -1,0 +1,1 @@
+@include('admin.posts.fields.rich_text')

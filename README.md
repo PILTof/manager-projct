@@ -1,4 +1,4 @@
-Сайт LARAVEL + Vue Js (vite) + Admin Panel
+Сайт LARAVEL + Vue Js (vite) + Backpack Admin Panel
 
 Процесс добавления страницы:
 

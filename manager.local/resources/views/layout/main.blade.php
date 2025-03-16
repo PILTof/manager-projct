@@ -1,5 +1,5 @@
 @include("header")
 <div id="app">
-    @yield('content')
+    <router-view></router-view>
 </div>
 @include('footer')

@@ -1,13 +1,6 @@
-<<<<<<< Updated upstream
-import { defineConfig } from 'vite';
-import laravel from 'laravel-vite-plugin';
-import tailwindcss from '@tailwindcss/vite';
-import vue from '@vitejs/plugin-vue'
-=======
 import { defineConfig } from "vite";
 import laravel from "laravel-vite-plugin";
 import vue from "@vitejs/plugin-vue";
->>>>>>> Stashed changes
 
 export default defineConfig({
     plugins: [
@@ -19,11 +12,6 @@ export default defineConfig({
     ],
     resolve: {
         alias: {
-<<<<<<< Updated upstream
-            vue: 'vue/dist/vue.esm-bundler.js'
-        }
-    }
-=======
             vue: "vue/dist/vue.esm-bundler.js",
         },
     },
@@ -32,5 +20,4 @@ export default defineConfig({
             origin: /^https?:\/\/(?:(?:[^:]+\.)?localhost|manager\.local|127\.0\.0\.1|\[::1\])(?::\d+)?$/,
         },
     },
->>>>>>> Stashed changes
 });

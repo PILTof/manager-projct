@@ -1,6 +1,8 @@
 import { createApp } from 'vue'
-import mainpage from './pages/mainpage.vue'
+import router from './router'
 
-const app = createApp()
-app.component('mainpage', mainpage)
-app.mount('#app')
+
+const app = createApp().use(router)
+app.mount('#app');
+/**Push current url path to router */
+router.push(window.location.pathname)

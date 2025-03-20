@@ -29,8 +29,7 @@ onMounted(() => {
         <q-carousel keep-alive swipeable navigation dark animated arrows v-model="slide" infinite transition-prev="slide-right"
             transition-next="slide-left">
             <q-carousel-slide :name="post.id" v-for="post in posts">
-                <q-paralax>
-                    {{ post.preview_text }}
+                <q-paralax v-html="post.preview_text">
                 </q-paralax>
             </q-carousel-slide>
         </q-carousel>

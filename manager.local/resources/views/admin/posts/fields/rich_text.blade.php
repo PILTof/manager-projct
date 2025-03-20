@@ -4,4 +4,4 @@
 ])
 <input type="hidden" name="{{ $field['name'] }}">
 
-<div style="background-color: white" data-editor_value="{{ $field['value'] }}" data-html_editor="{{ $field['name'] }}" ></div>
+<div style="background-color: white" data-editor_value="{{ $field['value'] ?? '' }}" data-html_editor="{{ $field['name'] }}" ></div>

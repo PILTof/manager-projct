@@ -27,6 +27,7 @@ document.querySelectorAll('[data-html_editor]').forEach(el => {
             'print',
         ],
     });
+    editor.setEditorValue(el.dataset.editor_value)
     el.addEventListener('change', function() {
         document.querySelector(`input[name="${el.dataset.html_editor}"]`).value = editor.value
     })

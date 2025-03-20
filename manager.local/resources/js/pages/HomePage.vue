@@ -1,6 +1,16 @@
-<script setup>
-
+<script>
+    
 </script>
 <template>
-    home
+    <div>
+        <div class="container">
+            <!-- Header -->
+            <div class="header">
+            </div>
+        </div>
+
+        <div class="container">
+            <main-top-banner></main-top-banner>
+        </div>
+    </div>
 </template>

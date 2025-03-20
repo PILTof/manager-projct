@@ -1,0 +1,17 @@
+body {
+    background-color: rgb(24, 30, 43) !important;
+    color: white;
+}
+.container {
+    margin: 0 200px;
+}
+
+.header {
+    display: flex;;
+    justify-content: space-between;
+    max-height: 50px;
+}
+
+.main-banner > .banner-label {
+    text-align: center;
+}

@@ -2,12 +2,19 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Resources\PostsListResource;
 use App\Models\Posts;
 use App\Http\Requests\StorePostsRequest;
 use App\Http\Requests\UpdatePostsRequest;
 
 class PostsController extends Controller
 {
+    public function list() {
+        $query = Posts::query()->get()->all();
+        return response()->json(
+              PostsListResource::make($query)
+        );
+    }
     /**
      * Display a listing of the resource.
      */

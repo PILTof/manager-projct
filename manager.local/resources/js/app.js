@@ -27,6 +27,7 @@ import "quasar/src/css/index.sass";
 
 // components
 import MainTopBanner from './components/banner/main-top/main-top-banner.vue';
+import Header from "./components/header.vue";
 
 const app = createApp().use(router).use(Quasar, {
     plugins: {}, // import Quasar plugins and add here
@@ -35,7 +36,11 @@ const app = createApp().use(router).use(Quasar, {
         dark: true
     }
 });
-app.component('main-top-banner', MainTopBanner)
+app
+.component('main-top-banner', MainTopBanner)
+.component('main-header', Header);
+
+
 app.mount("#app");
 /**Push current url path to router */
 router.push(window.location.pathname);

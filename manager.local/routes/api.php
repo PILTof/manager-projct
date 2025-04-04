@@ -9,4 +9,4 @@ Route::get('/user', function (Request $request) {
     return $request->user();
 })->middleware('auth:sanctum');
 
-Route::get('/posts', [PostsController::class, 'list'])->name('posts.list');
+Route::get('/posts', [PostsController::class, 'listForBanner'])->name('posts.list');

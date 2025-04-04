@@ -4,70 +4,24 @@ namespace App\Http\Controllers;
 
 use App\Http\Resources\PostsListResource;
 use App\Models\Posts;
-use App\Http\Requests\StorePostsRequest;
-use App\Http\Requests\UpdatePostsRequest;
 
 class PostsController extends Controller
 {
-    public function list() {
-        $query = Posts::query()->get()->all();
+    public function listForBanner() {
+        $elements = Posts::query()->orderBy('id', 'desc')->get()->all();
+        $result = [];
+        $group = [];
+        $c = 0;
+        foreach ($elements as $key => $item) {
+            $group[] = $item;
+            $c++;
+            if ($c > 1) {
+                $result[] = $group;
+                $group = [];
+            }
+        }
         return response()->json(
-              PostsListResource::make($query)
+              PostsListResource::make($result)
         );
-    }
-    /**
-     * Display a listing of the resource.
-     */
-    public function index()
-    {
-        //
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(StorePostsRequest $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     */
-    public function show(Posts $posts)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(Posts $posts)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(UpdatePostsRequest $request, Posts $posts)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(Posts $posts)
-    {
-        //
     }
 }

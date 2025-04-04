@@ -1,13 +1,10 @@
 <script>
-    
+
 </script>
 <template>
     <div>
-        <div class="container">
-            <!-- Header -->
-            <div class="header">
-            </div>
-        </div>
+        <!-- Header -->
+        <main-header></main-header>
 
         <div class="container">
             <main-top-banner></main-top-banner>

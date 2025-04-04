@@ -12,6 +12,38 @@ body {
     max-height: 50px;
 }
 
+.main-banner {
+    margin: 20px 0;
+}
+
+.main-banner[data-loading="true"] {
+    min-height: 400px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
 .main-banner > .banner-label {
     text-align: center;
+}
+
+.main-banner .single-item {
+
+    border: rgba(255, 255, 255, 0.293) 1px solid;
+    padding: 5px;
+
+}
+
+.main-banner .skeleton {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    row-gap: 20px;
+    width: 100%;
+}
+
+.main-banner .skeleton .inner {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
 }

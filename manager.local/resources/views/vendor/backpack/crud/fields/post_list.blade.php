@@ -1,0 +1,1 @@
+@include('admin.banner.fields.post_list')

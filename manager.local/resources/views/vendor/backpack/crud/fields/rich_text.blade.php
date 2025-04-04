@@ -1,1 +1,1 @@
-@include('admin.posts.fields.rich_text')
+@include('admin.global.fields.rich_text')

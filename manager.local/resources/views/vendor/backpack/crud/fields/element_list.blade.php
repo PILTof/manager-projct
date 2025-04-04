@@ -1,0 +1,1 @@
+@include('admin.global.fields.element_list')

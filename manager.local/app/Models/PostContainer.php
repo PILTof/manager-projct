@@ -11,9 +11,8 @@ class PostContainer extends Model
     use CrudTrait;
     /** @use HasFactory<\Database\Factories\PostContainerFactory> */
     use HasFactory;
-
-    // public function posts()
-    // {
-    //     return $this->hasMany(Posts::class, 'id', 'posts');
-    // }
+    
+    protected $fillable = [
+        'title'
+    ];
 }

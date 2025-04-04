@@ -12,6 +12,7 @@ export default defineConfig({
                 "resources/css/app.css",
                 "resources/js/app.js",
                 "resources/js/admin/posts/rich_text.js",
+                "resources/js/admin/fields/element_list_modal.js",
                 "resources/css/plugins/jodit.min.css",
                 "resources/css/styles/main.css"
             ],

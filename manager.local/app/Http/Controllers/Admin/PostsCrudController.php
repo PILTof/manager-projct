@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Http\Controllers\Admin\Crud\Ship\Fields\PostContainerController;
 use App\Http\Requests\PostsRequest;
 use Backpack\CRUD\app\Http\Controllers\CrudController;
 use Backpack\CRUD\app\Library\CrudPanel\CrudPanelFacade as CRUD;
@@ -73,16 +74,23 @@ class PostsCrudController extends CrudController
                 
             ])->to('before_content');
         }
-        CRUD::field('preview_text')->remove();
+        CRUD::field('preview_text')?->remove();
+        CRUD::field('post_container')?->remove();
+        CRUD::addField([
+            'name' => 'post_container',
+            'type' => 'element_list',
+            'controller' => PostContainerController::class
+        ]);
         CRUD::addField([
             'name' => 'preview_text',
             'type' => 'rich_text'
         ]);
-        CRUD::field('detail_text')->remove();
+        CRUD::field('detail_text')?->remove();
         CRUD::addField([
             'name' => 'detail_text',
             'type' => 'rich_text'
         ]);
+
     }
 
     /**

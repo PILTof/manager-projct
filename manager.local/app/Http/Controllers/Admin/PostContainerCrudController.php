@@ -3,8 +3,10 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Requests\PostContainerRequest;
+use App\Models\PostContainer;
 use Backpack\CRUD\app\Http\Controllers\CrudController;
 use Backpack\CRUD\app\Library\CrudPanel\CrudPanelFacade as CRUD;
+use Illuminate\Http\Request;
 
 /**
  * Class PostContainerCrudController
@@ -57,7 +59,28 @@ class PostContainerCrudController extends CrudController
     {
         CRUD::setValidation(PostContainerRequest::class);
         CRUD::setFromDb(); // set fields from db columns.
+        
+        CRUD::field('logo')->remove();
+        CRUD::field([
+            'name' => 'logo',
+            'label' => 'Logo',
+            'type' => 'file_preview',
+            'img-style' => 'max-height: 200px;max-width:200px;'
+        ])->withFiles([
+            'disk' => 'public',
+            'path' => 'uploads',
+            'uploader' => \Backpack\CRUD\app\Library\Uploaders\SingleFile::class,
+        ]);
 
+        CRUD::field('banner')->remove();
+        CRUD::field([
+            'name' => 'banner',
+            'type' => 'file_preview'
+        ])->withFiles([
+            'disk' => 'public',
+            'path' => 'uploads',
+            'uploader' => \Backpack\CRUD\app\Library\Uploaders\SingleFile::class,
+        ]);;
         /**
          * Fields can be defined using the fluent syntax:
          * - CRUD::field('price')->type('number');

@@ -59,21 +59,16 @@ class PostsCrudController extends CrudController
     {
         CRUD::setValidation(PostsRequest::class);
         CRUD::setFromDb(); // set fields from db columns.
-        CRUD::field('preview_image')->type('upload')->label('Изображение-превью')
-        ->withFiles([
+        CRUD::field('preview_image')?->remove();
+        CRUD::field([
+            'name' => 'preview_image',
+            'label' => 'Preview Image',
+            'type' => 'file_preview'
+        ])->withFiles([
             'disk' => 'public',
-            'path' => 'uploads'
+            'path' => 'uploads',
+            'uploader' => \Backpack\CRUD\app\Library\Uploaders\SingleFile::class,
         ]);
-        $item = $this->crud->getCurrentEntry();
-        if($item) {
-            $url = $item->value('preview_image');
-            Widget::add([
-                'type' => 'view',
-                'view' => 'admin.posts.fields.image',
-                'url' => Storage::url('uploads/'.$url),
-                
-            ])->to('before_content');
-        }
         CRUD::field('preview_text')?->remove();
         CRUD::field('post_container')?->remove();
         CRUD::addField([
@@ -90,7 +85,6 @@ class PostsCrudController extends CrudController
             'name' => 'detail_text',
             'type' => 'rich_text'
         ]);
-
     }
 
     /**

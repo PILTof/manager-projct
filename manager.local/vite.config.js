@@ -13,8 +13,10 @@ export default defineConfig({
                 "resources/js/app.js",
                 "resources/js/admin/posts/rich_text.js",
                 "resources/js/admin/fields/element_list_modal.js",
+                "resources/js/admin/fields/file_preview.js",
                 "resources/css/plugins/jodit.min.css",
-                "resources/css/styles/main.css"
+                "resources/css/styles/main.css",
+                "resources/css/plugins/file_preview.css"
             ],
             refresh: true,
         }),

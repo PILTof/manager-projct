@@ -1,0 +1,1 @@
+@include('admin.global.fields.file_preview')

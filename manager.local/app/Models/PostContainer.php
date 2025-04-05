@@ -13,6 +13,8 @@ class PostContainer extends Model
     use HasFactory;
     
     protected $fillable = [
-        'title'
+        'title',
+        'logo',
+        'banner'
     ];
 }

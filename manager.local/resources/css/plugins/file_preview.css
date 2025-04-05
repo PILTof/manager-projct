@@ -1,0 +1,7 @@
+.custom-file-container .image-preview {
+    background-size: contain;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

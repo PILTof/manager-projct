@@ -21,6 +21,7 @@ body {
     width: -webkit-fill-available;
     background-color: 1A1B26 !important;
     z-index: 1;
+    font-size: 16;
 }
  
 .header-wrapper .space-dummy {
@@ -39,10 +40,10 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    column-gap: 5px;
+    column-gap: 10px;
 }
 
-.header a {
+a {
     text-decoration: none;
     color: white;
 }
@@ -84,10 +85,18 @@ body {
     background-repeat: no-repeat;
 }
 
+.i-list {
+    background-image: url('https://manager.local/storage/images/types/i-list.svg');
+    background-size: contain;
+    padding: 8px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 
+/* BUTTONS */
 .button {
     border-radius: 5px;
-    padding: 9px;
+    padding: 9px 25px;
     display: flex;  
     justify-content: space-between;
     column-gap: 8px;
@@ -95,4 +104,31 @@ body {
 
 .button-violet {
     background-color: #7C3AED;
+}
+
+.button-transparent {
+    border: solid #7C3AED 1px;
+}
+
+/* WELCOME BLOCK */
+.p-welcome {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    row-gap: 50px;
+    margin-top: 150px;;
+}
+.p-welcome p {
+    font-size: 20;
+    color: #9CA3AF;
+    line-height: 20px;
+    text-align: center;
+    
+}
+.p-welcome-group {
+    display: flex;
+    justify-content: center;
+    column-gap: 16px;
+
 }

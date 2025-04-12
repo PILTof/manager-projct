@@ -1,6 +1,7 @@
 import { createApp, toDisplayString } from "vue";
 import router from "./router";
 import collect from "collect.js";
+import components from "./register_components";
 
 import { Quasar } from "quasar";
 import quasarLang from "quasar/lang/ru";
@@ -24,11 +25,6 @@ import "@quasar/extras/bootstrap-icons/bootstrap-icons.css";
 // Import Quasar css
 import "quasar/src/css/index.sass";
 
-
-// components
-import MainTopBanner from './components/banner/main-top/main-top-banner.vue';
-import Header from "./components/header.vue";
-
 const app = createApp().use(router).use(Quasar, {
     plugins: {}, // import Quasar plugins and add here
     lang: quasarLang,
@@ -36,9 +32,8 @@ const app = createApp().use(router).use(Quasar, {
         dark: true
     }
 });
-app
-.component('main-top-banner', MainTopBanner)
-.component('main-header', Header);
+
+components(app);
 
 
 app.mount("#app");

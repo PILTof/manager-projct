@@ -4,7 +4,8 @@
 <template>
     <div>
         <!-- Header -->
-        <main-header></main-header>
-        
+        <div class="container">
+            <p-header></p-header>
+        </div>
     </div>
 </template>

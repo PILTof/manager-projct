@@ -1,12 +1,8 @@
 // components
-import MainTopBanner from './components/banner/main-top/main-top-banner.vue';
-import Header from "./components/header.vue";
+import pHeader from "./components/blocks/p-header.vue"
 
 export default (app) => {
-    // app
-    // .component('main-top-banner', MainTopBanner)
-    // .component('main-header', Header)
-    
+    app.component('p-header', pHeader);
 
 
 

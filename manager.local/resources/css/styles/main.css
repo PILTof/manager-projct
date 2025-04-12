@@ -1,49 +1,98 @@
 body {
-    background-color: rgb(24, 30, 43) !important;
+    background-color: 1A1B26 !important;
     color: white;
 }
 .container {
-    margin: 0 200px;
+    margin: 0 96px;
+}
+
+/* HEADER */
+.header-wrapper {
+    position: relative;
 }
 
 .header {
-    display: flex;;
+    position: fixed;
+    top: 0;
+    display: flex;
     justify-content: space-between;
-    max-height: 50px;
-}
-
-.main-banner {
-    margin: 20px 0;
-}
-
-.main-banner[data-loading="true"] {
-    min-height: 400px;
-    display: flex;
-    flex-flow: column;
     align-items: center;
+    padding: 12px;
+    width: -webkit-fill-available;
+    background-color: 1A1B26 !important;
+    z-index: 1;
+}
+ 
+.header-wrapper .space-dummy {
+    position: relative;
+    height: 64px;
 }
 
-.main-banner > .banner-label {
-    text-align: center;
-}
-
-.main-banner .single-item {
-
-    border: rgba(255, 255, 255, 0.293) 1px solid;
-    padding: 5px;
-
-}
-
-.main-banner .skeleton {
+.h-group {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 20px;
+}
+
+.h-item {
+    display: flex;
+    align-items: center;
     justify-content: space-evenly;
-    row-gap: 20px;
-    width: 100%;
+    column-gap: 5px;
 }
 
-.main-banner .skeleton .inner {
-    display: flex;
-    flex-direction: column;
-    row-gap: 10px;
+.header a {
+    text-decoration: none;
+    color: white;
+}
+
+.h-logo {
+    background-image: url('https://manager.local/storage/images/logo.svg');
+    background-size: contain;
+    padding: 20px;
+}
+
+/* ICONS */
+.i-prog {
+    background-image: url('https://manager.local/storage/images/types/Vector-type.svg');
+    background-size: contain;
+    padding: 8px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.i-art {
+    background-image: url('https://manager.local/storage/images/types/Vector-type-1.svg');
+    background-size: contain;
+    padding: 8px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.i-stream {
+    background-image: url('https://manager.local/storage/images/types/Vector-type-2.svg');
+    background-size: contain;
+    padding: 8px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.i-magic {
+    background-image: url('https://manager.local/storage/images/i-magic.svg');
+    background-size: contain;
+    padding: 8px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+.button {
+    border-radius: 5px;
+    padding: 9px;
+    display: flex;  
+    justify-content: space-between;
+    column-gap: 8px;
+}
+
+.button-violet {
+    background-color: #7C3AED;
 }

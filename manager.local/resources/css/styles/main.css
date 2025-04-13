@@ -132,3 +132,48 @@ a {
     column-gap: 16px;
 
 }
+
+/* ITEMS */
+.p-items-wrapper {
+    margin-top: 80px;
+}
+.p-items {
+    display: flex;
+    justify-items: flex-start;
+    column-gap: 24px;
+    align-items: center;
+}
+.p-items-wrapper > .label {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    align-items: center;
+}
+.p-items-wrapper > .label > h5 {
+    margin: unset;
+}
+
+
+.p-items-wrapper .p-items-label {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 24px;
+    column-gap: 12px;
+
+}
+/* ITEM */
+.p-item label {
+    font-size: 20;
+}
+
+.p-item p {
+    margin-top: 42px;
+}
+.p-item .time {
+    display: flex;
+    justify-content: end;
+}
+.q-card--dark {
+    box-shadow: none !important;
+}
